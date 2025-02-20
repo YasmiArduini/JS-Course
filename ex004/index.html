@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 04</title>
+</head>
+<body>
+    
+<h1>Trabalhando com dados 2.0</h1>
+
+<Button onclick="inicio()">clique para começar</Button>
+<section id="resultado">
+<p>Aqui vai aparecer um Resultado</p>
+
+</section>
+
+<script>
+    function inicio(){
+        let nome = window.prompt('qual é o seu nome?')
+        let res = window.document.getElementById('resultado')
+        //Tambem funciona com o comando abaixo:
+        //let res = window.document(querySelector('section#resultado'))
+        res.innerHTML = `Olá, <strong>${nome}</strong>! é um grande prazer`
+    }
+</script>
+
+</body>
+</html>

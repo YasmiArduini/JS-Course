@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculos solo</title>
+</head>
+
+<body>
+
+    <h1>Calculos de dobro e metade</h1>
+    <Button onclick="inicio()">Clique para Calcular</Button>
+  
+
+ 
+
+
+
+    <div id="resultado"></div>
+</body>
+
+<script>
+    window.alert("Seja bem-vindo(a) ao meu site")
+
+    function inicio() {
+        let num1 = window.prompt('coloque um numero:')
+        let dobro1 = num1 * 2;
+        let metade1 = num1 / 2;
+        let res = window.document.getElementById('resultado')
+        res.innerHTML = `o dobro de ${num1} é ${dobro1} e a metade é ${metade1}`
+    }
+
+
+
+
+</script>
+
+</html>

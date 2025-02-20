@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fórmula de Bhaskara</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            text-align: center;
+            margin: 50px;
+        }
+        .resultado {
+            font-weight: bold;
+            color: #ffcc00;
+        }
+    </style>
+</head>
+<body>
+    <h1>Resolvendo Bhaskara</h1>
+    <button onclick="calcularDelta()">Calcular</button>
+    <h2>Resolvendo Bhaskara</h2>
+    <p id="equacao"></p>
+    <p id="calculo"></p>
+    <p id="resultado" class="resultado"></p>
+
+    <script>
+        function calcularDelta() {
+            let a = parseFloat(prompt("Qual é o valor de a?"));
+            let b = parseFloat(prompt("Qual é o valor de b?"));
+            let c = parseFloat(prompt("Qual é o valor de c?"));
+            
+            let delta = (b * b) - (4 * a * c);
+            
+            document.getElementById('equacao').innerHTML = `A equação atual é ${a}x² + ${b}x + ${c} = 0`;
+            document.getElementById('calculo').innerHTML = `O cálculo realizado será Δ = ${b}² - 4 . ${a} . ${c}`;
+            document.getElementById('resultado').innerHTML = `O valor calculado foi Δ = <strong>${delta}</strong>`;
+        }
+    </script>
+</body>
+</html>

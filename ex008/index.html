@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercicio 008</title>
+</head>
+<body>
+
+    <h1>Varios Calculos</h1>
+
+    <button onclick="calcular()">clique para calcular</button>
+    <section id="result">
+        <p>O resultado vai aparecer aqui</p>
+    </section>
+    <script>
+        function calcular(){
+            let num = Number(window.prompt('Digite um numero: '))
+            let res = document.querySelector('section#result')
+
+            //`` = template literal = recurso "novo" do JS
+            res.innerHTML = `<p>O número a ser analisado aqui será o <strong>${num}</strong></p><hr>`
+            res.innerHTML += `<p>O seu valor absoluto é ${Math.abs(num)}</p>`
+            res.innerHTML += `<p>A sua parte inteira ${Math.trunc(num)}</p>`
+            res.innerHTML += `<p>O valor inteiro mais próximo é ${Math.round(num)}</p>`
+            res.innerHTML += `<p>A sua raiz quadrada é ${Math.sqrt(num)}</p>`
+            res.innerHTML += `<p>A sua raiz raiz cúbica é ${Math.cbrt(num)}</p>`
+            res.innerHTML += `<p>O valor de ${num}<sup>2</sup> é ${Math.pow(num, 2)}</p>`
+            res.innerHTML += `<p>O valor de ${num}<sup>3</sup> é ${Math.pow(num, 3)}</p>`
+           
+
+        }
+    </script>
+
+<style>
+    body {
+    background-color: black;
+    color: blue;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 0;
+    padding: 20px;
+}
+
+h1 {
+    color: blue;
+}
+
+button {
+    background-color: blue;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+button:hover {
+    background-color: darkblue;
+}
+
+section#result {
+    background-color: #121212;
+    color: white;
+    border: 1px solid blue;
+    padding: 20px;
+    margin-top: 20px;
+    border-radius: 10px;
+}
+
+</style>
+
+
+</body>
+</html>
